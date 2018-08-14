@@ -5,8 +5,9 @@ import time
 import hashlib
 import threading
 
-# time1 = time.time()
-
+# How to use
+# 1. cmd open
+# 2. python find_a_file_to_use_hash_and _size <path> <md5> <file_size>
 
 class FindFile(threading.Thread):
     def __init__(self, file):
@@ -68,6 +69,3 @@ for paths, dirs, files in os.walk(realPathPart):
         for file in files:
             t = FindFile(file)
             t.start()
-
-# time2 = time.time()
-# print(time2-time1)
